@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, DM_Serif_Text } from "next/font/google";
 import "./globals.css";
 import ClientHeader from "@/components/ClientHeader";
 import Footer from "@/components/Footer";
@@ -20,9 +20,15 @@ import FixedSocialRail from "@/components/FixedSocialRail";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const dmSerifText = DM_Serif_Text({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-dm-serif-text",
   display: "swap",
 });
 
@@ -134,7 +140,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body suppressHydrationWarning className={`${dmSans.variable} font-sans antialiased text-[#261810]`}>
+      <body suppressHydrationWarning className={`${dmSans.variable} ${dmSerifText.variable} font-sans antialiased text-[#261810]`}>
         <GlobalErrorReporter />
         <Suspense fallback={null}>
           <FacebookPixel />

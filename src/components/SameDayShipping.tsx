@@ -31,11 +31,11 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
           {/* Right Section - Content */}
           <div className="md:w-[55%] bg-[#4b2e22] text-[#fff8ed] p-12 flex flex-col justify-center">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#ffffff]">
-              Carefully packed — Tracked, protected, and on its way
+              Packed with care — Tracked from our shop to your door
             </h1>
 
             <p className="text-lg leading-relaxed font-normal mb-12">
-              Every Bianca Butler piece is prepared with care and packed to protect its details in transit. Tracking is provided so you can follow your order from dispatch to delivery.
+              Each piece is wrapped thoughtfully and secured for the journey. Once your order ships, tracking lets you follow it all the way to your door.
             </p>
             <Link
               href="/shipping-policy"

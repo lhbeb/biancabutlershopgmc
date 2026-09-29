@@ -1,4 +1,4 @@
-/* Font loading optimization - using system fonts for better performance */
+/* Storefront typography pairs DM Sans body copy with DM Serif Text headings. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -157,7 +157,7 @@ button {
   h4,
   h5,
   h6 {
-    font-family: var(--font-dm-sans), sans-serif !important;
+    font-family: var(--font-dm-serif-text), serif !important;
     font-style: normal !important;
     font-weight: 700 !important;
     font-stretch: normal !important;
@@ -470,7 +470,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-dm-sans), sans-serif;
+  font-family: var(--font-dm-serif-text), serif;
 }
 
 @keyframes fade-in {

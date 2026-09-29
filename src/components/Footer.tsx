@@ -12,9 +12,18 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
-            <Link href="/" className="mb-4 flex flex-col leading-none" aria-label="Bianca Butler home">
-              <span className="font-serif text-2xl font-bold tracking-[0.16em] text-[#fff8ed]">BIANCA BUTLER</span>
-              <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-[#d4a84f]">Antiques &amp; Objects</span>
+            <Link
+              href="/"
+              className="mb-4 inline-flex rounded-lg bg-[#fff8ed] p-2"
+              aria-label="Bianca Butler home"
+            >
+              <Image
+                src="/mainlogo.svg"
+                alt="Bianca Butler"
+                width={190}
+                height={56}
+                className="h-auto w-[150px]"
+              />
             </Link>
             <p className="mb-4 text-[#fff8ed]">
               A considered collection of figurines, decorative objects, vintage accents, and collectible finds curated by Bianca Butler.

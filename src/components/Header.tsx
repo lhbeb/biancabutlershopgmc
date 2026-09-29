@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { ShoppingCart, Menu, X, Search, ChevronLeft, ChevronRight, Info, MessageSquare } from 'lucide-react';
 import { getCartCount, getCartItem } from '@/utils/cart';
@@ -203,9 +204,15 @@ const Header = () => {
         <div suppressHydrationWarning={true} className="bg-[#f6efe5] text-[#4b2e22]">
           <div suppressHydrationWarning={true} className="container mx-auto px-4 py-3">
             <div suppressHydrationWarning={true} className="flex items-center justify-between gap-4">
-            <Link href="/" className="flex shrink-0 flex-col leading-none" aria-label="Bianca Butler home">
-              <span className="font-serif text-xl font-bold tracking-[0.16em] text-[#4b2e22] sm:text-2xl">BIANCA BUTLER</span>
-              <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-[#b8863b]">Antiques &amp; Objects</span>
+            <Link href="/" className="flex shrink-0 items-center" aria-label="Bianca Butler home">
+              <Image
+                src="/mainlogo.svg"
+                alt="Bianca Butler"
+                width={190}
+                height={56}
+                priority
+                className="h-auto w-[150px] sm:w-[190px]"
+              />
             </Link>
 
             {/* Desktop Search Bar - NEW */}
