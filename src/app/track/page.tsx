@@ -151,11 +151,11 @@ const TrackPage = () => {
               <h1 className="max-w-2xl text-3xl font-semibold text-[#261810] sm:text-4xl">
                 Track your order
               </h1>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-[#5B6785] sm:text-base">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-[#68554A] sm:text-base">
                 Enter your tracking number below to see the latest carrier updates for your Bianca Butler order.
               </p>
 
-              <form onSubmit={handleTrack} className="mt-8 rounded-[24px] border border-[#E8EEF8] bg-[#F8FBFF] p-4 sm:p-5">
+              <form onSubmit={handleTrack} className="mt-8 rounded-[24px] border border-[#E9DED2] bg-[#FCF8F2] p-4 sm:p-5">
                 <label htmlFor="trackingNumber" className="mb-3 block text-sm font-medium text-[#261810]">
                   Tracking number
                 </label>
@@ -173,7 +173,7 @@ const TrackPage = () => {
                     placeholder="Enter your tracking number"
                     maxLength={50}
                     autoComplete="off"
-                    className="h-14 flex-1 rounded-2xl border border-[#D6E3FF] bg-white px-4 text-sm font-medium text-[#261810] outline-none transition focus:border-[#4b2e22]/35 focus:ring-2 focus:ring-[#4b2e22]/10"
+                    className="h-14 flex-1 rounded-2xl border border-[#E9DED2] bg-white px-4 text-sm font-medium text-[#261810] outline-none transition focus:border-[#4b2e22]/35 focus:ring-2 focus:ring-[#4b2e22]/10"
                   />
                   <button
                     type="submit"
@@ -195,20 +195,20 @@ const TrackPage = () => {
                 )}
               </form>
 
-              <div className="mt-8 overflow-hidden rounded-[24px] border border-[#E8EEF8] bg-white p-2">
+              <div className="mt-8 overflow-hidden rounded-[24px] border border-[#E9DED2] bg-white p-2">
                 <div
                   id="YQContainer"
-                  className="min-h-[560px] rounded-[24px] bg-[#F8FBFF]"
+                  className="min-h-[560px] rounded-[24px] bg-[#FCF8F2]"
                 />
               </div>
             </section>
 
-            <aside className="border-t border-[#D6E3FF] bg-[#F8FBFF] px-6 py-8 lg:border-l lg:border-t-0">
-              <div className="rounded-[24px] border border-[#DCE5F5] bg-white p-6">
+            <aside className="border-t border-[#E9DED2] bg-[#FCF8F2] px-6 py-8 lg:border-l lg:border-t-0">
+              <div className="rounded-[24px] border border-[#E9DED2] bg-white p-6">
                 <h2 className="text-xl font-semibold text-[#261810]">
                   Before you search
                 </h2>
-                <div className="mt-4 space-y-4 text-sm leading-7 text-[#5B6785]">
+                <div className="mt-4 space-y-4 text-sm leading-7 text-[#68554A]">
                   <p>
                     Use the exact tracking number from your Bianca Butler shipping confirmation email.
                   </p>
@@ -221,9 +221,9 @@ const TrackPage = () => {
                 </div>
               </div>
 
-              <div className="mt-6 rounded-[24px] border border-[#DCE5F5] bg-white p-6">
+              <div className="mt-6 rounded-[24px] border border-[#E9DED2] bg-white p-6">
                 <h3 className="text-lg font-semibold text-[#261810]">Need help with your order?</h3>
-                <p className="mt-3 text-sm leading-7 text-[#5B6785]">
+                <p className="mt-3 text-sm leading-7 text-[#68554A]">
                   Reach out to our team with your order number and tracking number, and we’ll help you from there.
                 </p>
                 <a

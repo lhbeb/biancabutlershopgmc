@@ -654,21 +654,21 @@ html.modal-open {
 
 /* ── Bianca Butler Brand Custom Live Chat Widget Styling ── */
 #lc-btn {
-  background: linear-gradient(135deg, #4b2e22 0%, #1f274a 100%) !important;
-  box-shadow: 0 8px 24px -4px rgba(46, 56, 104, 0.45), 0 0 0 2px rgba(245, 151, 12, 0.3) !important;
-  animation: lc-takimia-pulse 2.5s ease-in-out infinite !important;
+  background: linear-gradient(135deg, #4b2e22 0%, #382117 100%) !important;
+  box-shadow: 0 8px 24px -4px rgba(75, 46, 34, 0.35), 0 0 0 2px rgba(239, 193, 84, 0.3) !important;
+  animation: lc-bianca-pulse 2.5s ease-in-out infinite !important;
 }
 
 #lc-btn:hover {
   transform: scale(1.08) !important;
-  box-shadow: 0 12px 28px -2px rgba(46, 56, 104, 0.6), 0 0 0 3px rgba(245, 151, 12, 0.5) !important;
+  box-shadow: 0 12px 28px -2px rgba(75, 46, 34, 0.45), 0 0 0 3px rgba(239, 193, 84, 0.45) !important;
 }
 
 #lc-tooltip {
   background: #4b2e22 !important;
   color: #ffffff !important;
   border: 1px solid rgba(245, 151, 12, 0.4) !important;
-  box-shadow: 0 6px 20px rgba(46, 56, 104, 0.35) !important;
+  box-shadow: 0 6px 20px rgba(75, 46, 34, 0.25) !important;
   font-family: var(--font-dm-sans), system-ui, sans-serif !important;
 }
 
@@ -678,16 +678,16 @@ html.modal-open {
 }
 
 #lc-iframe-wrap {
-  border: 1px solid rgba(46, 56, 104, 0.2) !important;
+  border: 1px solid rgba(75, 46, 34, 0.2) !important;
   border-radius: 18px !important;
-  box-shadow: 0 20px 48px -10px rgba(46, 56, 104, 0.3) !important;
+  box-shadow: 0 20px 48px -10px rgba(75, 46, 34, 0.22) !important;
 }
 
-@keyframes lc-takimia-pulse {
+@keyframes lc-bianca-pulse {
   0%, 100% {
-    box-shadow: 0 8px 24px -4px rgba(46, 56, 104, 0.45), 0 0 0 0 rgba(245, 151, 12, 0.4);
+    box-shadow: 0 8px 24px -4px rgba(75, 46, 34, 0.35), 0 0 0 0 rgba(239, 193, 84, 0.4);
   }
   50% {
-    box-shadow: 0 12px 28px -2px rgba(46, 56, 104, 0.6), 0 0 0 6px rgba(245, 151, 12, 0);
+    box-shadow: 0 12px 28px -2px rgba(75, 46, 34, 0.45), 0 0 0 6px rgba(239, 193, 84, 0);
   }
 }

@@ -286,7 +286,7 @@ const HomeReviews: React.FC<HomeReviewsProps> = ({
               <p className="text-gray-600 mb-6">Share your experience and help other customers choose with confidence.</p>
               <button
                 onClick={() => setShowReviewForm(true)}
-                className="bg-[#4b2e22] hover:bg-[#1f274a] text-[#fff8ed] px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                className="bg-[#4b2e22] hover:bg-[#382117] text-[#fff8ed] px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
                 Write a Review
               </button>
@@ -329,7 +329,7 @@ const HomeReviews: React.FC<HomeReviewsProps> = ({
                 <div className="flex items-center">
                   <button
                     onClick={() => setShowReviewForm(true)}
-                    className="bg-[#4b2e22] hover:bg-[#1f274a] text-[#fff8ed] px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
+                    className="bg-[#4b2e22] hover:bg-[#382117] text-[#fff8ed] px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
                   >
                     <Send className="h-4 w-4" />
                     Write a Review
@@ -388,7 +388,7 @@ const HomeReviews: React.FC<HomeReviewsProps> = ({
 
                   {review.productTitle && review.productSlug && (
                     <div className="mb-2">
-                      <span className="text-xs text-[#4b2e22] hover:text-[#1f274a] hover:underline cursor-default inline-flex items-center gap-1">
+                      <span className="text-xs text-[#4b2e22] hover:text-[#382117] hover:underline cursor-default inline-flex items-center gap-1">
                         {review.productTitle}
                       </span>
                     </div>
@@ -637,7 +637,7 @@ const HomeReviews: React.FC<HomeReviewsProps> = ({
                     className={`flex-1 px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                       isSubmitting 
                         ? 'bg-gray-400 cursor-not-allowed text-white' 
-                        : 'bg-[#4b2e22] hover:bg-[#1f274a] text-[#fff8ed]'
+                        : 'bg-[#4b2e22] hover:bg-[#382117] text-[#fff8ed]'
                     }`}
                   >
                     {isSubmitting ? 'Submitting...' : 'Submit Review'}

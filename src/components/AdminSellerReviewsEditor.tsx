@@ -125,7 +125,7 @@ export default function AdminSellerReviewsEditor({ reviews, onChange }: Props) {
           <button
             type="button"
             onClick={addReview}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#4b2e22] text-white text-xs font-medium rounded-xl hover:bg-[#1f274a] transition-all shadow-sm"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#4b2e22] text-white text-xs font-medium rounded-xl hover:bg-[#382117] transition-all shadow-sm"
           >
             <Plus className="h-3.5 w-3.5" />
             Add Review
@@ -300,7 +300,7 @@ export default function AdminSellerReviewsEditor({ reviews, onChange }: Props) {
                         <button
                           type="button"
                           onClick={() => addImageSlot(review.id)}
-                          className="inline-flex items-center gap-1 text-xs font-medium text-[#4b2e22] hover:text-[#1f274a] transition-colors"
+                          className="inline-flex items-center gap-1 text-xs font-medium text-[#4b2e22] hover:text-[#382117] transition-colors"
                         >
                           <Plus className="h-3.5 w-3.5" />
                           Add Image

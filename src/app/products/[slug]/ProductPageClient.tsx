@@ -547,7 +547,7 @@ export default function ProductPageClient({
           <p className="text-gray-600 mb-8">The product you&apos;re looking for doesn&apos;t exist.</p>
           <Link
             href="/"
-            className="inline-block bg-[#4b2e22] hover:bg-[#1f274a] text-[#fff8ed] px-6 py-3 rounded-lg transition-colors duration-300"
+            className="inline-block bg-[#4b2e22] hover:bg-[#382117] text-[#fff8ed] px-6 py-3 rounded-lg transition-colors duration-300"
           >
             Return to Home
           </Link>
@@ -567,7 +567,7 @@ export default function ProductPageClient({
           <p className="text-gray-600 mb-8">The product information is incomplete.</p>
           <Link
             href="/"
-            className="inline-block bg-[#4b2e22] hover:bg-[#1f274a] text-[#fff8ed] px-6 py-3 rounded-lg transition-colors duration-300"
+            className="inline-block bg-[#4b2e22] hover:bg-[#382117] text-[#fff8ed] px-6 py-3 rounded-lg transition-colors duration-300"
           >
             Return to Home
           </Link>
@@ -812,7 +812,7 @@ export default function ProductPageClient({
                           <path d="M13.3334 14.666V7.33268H11.3334C10.9652 7.33268 10.6667 7.0342 10.6667 6.66602C10.6667 6.29783 10.9652 5.99935 11.3334 5.99935H14C14.3682 5.99935 14.6667 6.29783 14.6667 6.66602V15.3327C14.6667 15.7009 14.3682 15.9993 14 15.9993H2.00004C1.63185 15.9993 1.33337 15.7009 1.33337 15.3327V6.66602C1.33337 6.29783 1.63185 5.99935 2.00004 5.99935H4.66671C5.0349 5.99935 5.33337 6.29783 5.33337 6.66602C5.33337 7.0342 5.0349 7.33268 4.66671 7.33268H2.66671V14.666H13.3334Z"></path>
                         </svg>
                       </button>
-                      <button onClick={handleAddToCart} disabled={isAddingToCart || isBuyingNow} className="flex-1 lg:w-full bg-[#4b2e22] hover:bg-[#1f274a] text-[#fff8ed] py-3 lg:py-4 px-6 rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed text-sm lg:text-base">
+                      <button onClick={handleAddToCart} disabled={isAddingToCart || isBuyingNow} className="flex-1 lg:w-full bg-[#4b2e22] hover:bg-[#382117] text-[#fff8ed] py-3 lg:py-4 px-6 rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed text-sm lg:text-base">
                         {isAddingToCart ? <><div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#fff8ed] mr-2"></div>Adding to Cart...</> : <><ShoppingCart className="h-5 w-5 mr-2" />Add to Cart</>}
                       </button>
                     </div>
@@ -859,7 +859,7 @@ export default function ProductPageClient({
                         <button
                           onClick={() => handleBuyNow()}
                           disabled={isAddingToCart || isBuyingNow}
-                          className="w-full bg-transparent border-2 border-[#4b2e22] hover:border-[#1f274a] text-[#4b2e22] hover:text-[#1f274a] py-4 px-6 rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full bg-transparent border-2 border-[#4b2e22] hover:border-[#382117] text-[#4b2e22] hover:text-[#382117] py-4 px-6 rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           {isBuyingNow ? (
                             <>
@@ -884,15 +884,15 @@ export default function ProductPageClient({
               </div>
               <div className="mt-8 lg:hidden">
                 <h2 className="text-xl font-medium text-[#261810] mb-4">Features and Specs</h2>
-                <div className="rounded-[20px] border border-[#E8EEF8] bg-white px-5 py-5">
-                  <p className="whitespace-pre-line text-sm leading-7 text-[#5B6785]">
+                <div className="rounded-[20px] border border-[#E9DED2] bg-white px-5 py-5">
+                  <p className="whitespace-pre-line text-sm leading-7 text-[#68554A]">
                     {showFullDescription ? descriptionText : descriptionPreview}
                   </p>
                   {shouldCollapseDescription && (
                     <button
                       type="button"
                       onClick={() => setShowFullDescription((current) => !current)}
-                      className="mt-4 text-sm font-semibold text-[#4b2e22] transition hover:text-[#1f274a]"
+                      className="mt-4 text-sm font-semibold text-[#4b2e22] transition hover:text-[#382117]"
                     >
                       {showFullDescription ? "Show less" : "Show more"}
                     </button>
@@ -903,16 +903,16 @@ export default function ProductPageClient({
           </div>
 
           <div className="mt-12 hidden lg:block">
-            <section className="rounded-[24px] border border-[#DCE5F5] bg-white px-8 py-8">
+            <section className="rounded-[24px] border border-[#E9DED2] bg-white px-8 py-8">
               <h2 className="text-2xl font-semibold text-[#261810]">Features and Specs</h2>
-              <p className="mt-4 whitespace-pre-line text-[15px] leading-8 text-[#5B6785]">
+              <p className="mt-4 whitespace-pre-line text-[15px] leading-8 text-[#68554A]">
                 {showFullDescription ? descriptionText : descriptionPreview}
               </p>
               {shouldCollapseDescription && (
                 <button
                   type="button"
                   onClick={() => setShowFullDescription((current) => !current)}
-                  className="mt-5 text-sm font-semibold text-[#4b2e22] transition hover:text-[#1f274a]"
+                  className="mt-5 text-sm font-semibold text-[#4b2e22] transition hover:text-[#382117]"
                 >
                   {showFullDescription ? "Show less" : "Show more"}
                 </button>
@@ -922,10 +922,10 @@ export default function ProductPageClient({
 
           {/* FAQ Section - Full Width */}
           <div className="mt-16 w-full">
-            <section className="rounded-[24px] border border-[#DCE5F5] bg-white">
-              <div className="border-b border-[#E8EEF8] px-6 py-6 sm:px-8">
+            <section className="rounded-[24px] border border-[#E9DED2] bg-white">
+              <div className="border-b border-[#E9DED2] px-6 py-6 sm:px-8">
                 <h2 className="text-2xl font-semibold text-[#261810]">Frequently Asked Questions</h2>
-                <p className="mt-2 max-w-2xl text-sm leading-7 text-[#5B6785]">
+                <p className="mt-2 max-w-2xl text-sm leading-7 text-[#68554A]">
                   Quick answers to the things shoppers usually want to know before placing an order.
                 </p>
               </div>
@@ -937,7 +937,7 @@ export default function ProductPageClient({
                   return (
                     <div
                       key={item.question}
-                      className={`border-b border-[#E8EEF8] py-5 last:border-b-0 ${isOpen ? "" : ""}`}
+                      className={`border-b border-[#E9DED2] py-5 last:border-b-0 ${isOpen ? "" : ""}`}
                     >
                       <button
                         type="button"
@@ -957,12 +957,12 @@ export default function ProductPageClient({
                         </span>
                       </button>
                       {isOpen && (
-                        <div className="pt-3 text-sm leading-7 text-[#5B6785]">
+                        <div className="pt-3 text-sm leading-7 text-[#68554A]">
                           <p>{item.answer}</p>
                           {item.linkHref && item.linkLabel && (
                             <Link
                               href={item.linkHref}
-                              className="mt-2 inline-flex text-sm font-semibold text-[#4b2e22] transition hover:text-[#1f274a]"
+                              className="mt-2 inline-flex text-sm font-semibold text-[#4b2e22] transition hover:text-[#382117]"
                             >
                               {item.linkLabel}
                             </Link>
@@ -975,7 +975,7 @@ export default function ProductPageClient({
               </div>
 
               {faqItems.length > 4 && (
-                <div className="border-t border-[#E8EEF8] px-6 py-5 sm:px-8">
+                <div className="border-t border-[#E9DED2] px-6 py-5 sm:px-8">
                   <button
                     type="button"
                       onClick={() => {
@@ -984,7 +984,7 @@ export default function ProductPageClient({
                           setOpenFaqIndex(-1);
                         }
                       }}
-                    className="text-sm font-semibold text-[#4b2e22] transition hover:text-[#1f274a]"
+                    className="text-sm font-semibold text-[#4b2e22] transition hover:text-[#382117]"
                   >
                     {showAllFaqs ? "Show fewer answers" : "View more answers"}
                   </button>

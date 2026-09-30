@@ -36,7 +36,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode; pathnam
               <Link 
                 href="/"
                 onClick={() => this.setState({ hasError: false, error: null })}
-                className="inline-block bg-[#4b2e22] hover:bg-[#1f274a] text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                className="inline-block bg-[#4b2e22] hover:bg-[#382117] text-white px-6 py-3 rounded-lg transition-colors duration-300"
               >
                 Return to Home
               </Link>
@@ -66,4 +66,4 @@ export default function ErrorBoundaryWrapper({ children }: { children: React.Rea
   const pathname = usePathname();
   
   return <ErrorBoundary pathname={pathname}>{children}</ErrorBoundary>;
-} 
+}

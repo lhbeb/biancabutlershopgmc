@@ -116,7 +116,7 @@ function StripePaymentForm({
         className={`w-full rounded-xl px-6 py-4 text-base font-bold text-white transition-colors focus:outline-none focus:ring-4 focus:ring-[#4b2e22] focus:ring-offset-2 ${
           !stripe || !elements || isSubmitting || !isAddressVerified
             ? 'cursor-not-allowed bg-gray-400'
-            : 'bg-[#4b2e22] hover:bg-[#1f274a]'
+            : 'bg-[#4b2e22] hover:bg-[#382117]'
         }`}
       >
         {isSubmitting ? 'Processing payment...' : 'Pay securely'}

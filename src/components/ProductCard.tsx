@@ -24,7 +24,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div className={`${cardBackground} rounded-md shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col`}>
       <Link href={`/products/${slug}`} className="block">
-        <div className={`relative w-full bg-white ${showFullImage ? 'aspect-square' : 'h-48'}`}>
+        <div className="relative w-full aspect-square bg-white">
           {!imgLoaded && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse rounded-t-md z-10">
               <div className="h-12 w-12 bg-gray-300 rounded-full" />
@@ -59,7 +59,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <span className="text-xl font-bold text-[#261810]">${new Intl.NumberFormat('en-US').format(price)}</span>
           <Link
             href={`/products/${slug}`}
-            className="flex items-center text-sm text-[#4b2e22] hover:text-[#1f274a] transition-colors"
+            className="flex items-center text-sm text-[#4b2e22] hover:text-[#382117] transition-colors"
           >
             <Eye className="h-4 w-4 mr-1" />
             <span>View Details</span>

@@ -273,7 +273,7 @@ export default function ReturnPolicyPage() {
           </div>
 
           {/* Promise Footer */}
-          <div className="bg-gradient-to-r from-[#4b2e22] to-[#1f274a] text-white p-6 sm:p-8 rounded-xl shadow-md mt-8">
+          <div className="bg-gradient-to-r from-[#4b2e22] to-[#382117] text-white p-6 sm:p-8 rounded-xl shadow-md mt-8">
             <h3 className="text-xl font-bold mb-2">Our Promise</h3>
             <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
               We stand behind every product we sell. If something isn&apos;t right with your order, we&apos;ll listen, help, and make it right as quickly as possible.

@@ -82,7 +82,7 @@ function MobileCheckoutCTA({
         className={`w-full font-bold py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-[#4b2e22] focus:ring-offset-2 text-lg sm:text-xl ${
           disabled
             ? 'bg-gray-400 cursor-not-allowed text-white'
-            : 'bg-[#4b2e22] hover:bg-[#1f274a] text-white active:scale-[0.98]'
+            : 'bg-[#4b2e22] hover:bg-[#382117] text-white active:scale-[0.98]'
         }`}
       >
         {isLoading ? (
@@ -116,7 +116,7 @@ function StateSuggestions({
           return (
             <div
               key={suggestion}
-              className={`px-4 py-3 cursor-pointer hover:bg-blue-50 transition-colors ${isSelected ? 'bg-blue-50' : ''}`}
+            className={`px-4 py-3 cursor-pointer hover:bg-[#F7F0E6] transition-colors ${isSelected ? 'bg-[#F7F0E6]' : ''}`}
               onMouseDown={() => form.handleStateSelect(suggestion)}
             >
               {suggestion}
@@ -131,8 +131,8 @@ function StateSuggestions({
             role="option"
             aria-selected={isSelected}
             tabIndex={isSelected ? 0 : -1}
-            className={`w-full text-left p-3 hover:bg-blue-50 border-b border-gray-100 last:border-b-0 transition-colors duration-200 ${
-              isSelected ? 'bg-blue-50 text-[#4b2e22]' : 'text-[#261810]'
+            className={`w-full text-left p-3 hover:bg-[#F7F0E6] border-b border-gray-100 last:border-b-0 transition-colors duration-200 ${
+              isSelected ? 'bg-[#F7F0E6] text-[#4b2e22]' : 'text-[#261810]'
             }`}
             onClick={() => form.handleStateSelect(suggestion)}
           >
@@ -396,7 +396,7 @@ function ContinueButton({
       onClick={() => console.log('🔘 [Checkout] Submit button clicked (desktop)')}
       disabled={isBusy}
       className={`w-full font-bold py-5 px-8 rounded-xl transition-colors duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed text-white focus:outline-none focus:ring-4 focus:ring-[#4b2e22] focus:ring-offset-2 text-xl ${
-        isBusy ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#4b2e22] hover:bg-[#1f274a]'
+        isBusy ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#4b2e22] hover:bg-[#382117]'
       }`}
     >
       {isBusy ? (
@@ -533,7 +533,7 @@ export default function CheckoutShippingStep({
       <CheckoutNotifier />
       <main className="flex-grow py-4">
         <div className="container mx-auto px-4">
-          <Link href={`/products/${product.slug}`} className="inline-flex items-center text-[#4b2e22] hover:text-[#1f274a] mb-4 text-sm">
+          <Link href={`/products/${product.slug}`} className="inline-flex items-center text-[#4b2e22] hover:text-[#382117] mb-4 text-sm">
             <ArrowLeft className="h-3.5 w-3.5 mr-1.5" />
             <span className="hidden sm:inline">Back To Product</span>
             <span className="sm:hidden">Back</span>
@@ -710,7 +710,7 @@ export default function CheckoutShippingStep({
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-500">Shipping</span>
-                      <span className="font-semibold text-emerald-600">Free</span>
+                      <span className="font-semibold text-[#4b2e22]">Free</span>
                     </div>
                     <div className="border-t border-gray-100 pt-3 flex justify-between items-center">
                       <span className="text-sm font-semibold text-[#261810]">Total</span>

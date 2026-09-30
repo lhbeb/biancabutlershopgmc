@@ -207,7 +207,7 @@ export default function ShippingPolicyPage() {
 
           <Link
             href="/contact"
-            className="mt-6 inline-flex items-center justify-center rounded-xl bg-[#4b2e22] px-5 py-3 text-sm font-semibold text-[#fff8ed] transition hover:bg-[#1f274a]"
+            className="mt-6 inline-flex items-center justify-center rounded-xl bg-[#4b2e22] px-5 py-3 text-sm font-semibold text-[#fff8ed] transition hover:bg-[#382117]"
           >
             Contact Support
           </Link>

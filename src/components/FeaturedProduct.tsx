@@ -80,7 +80,7 @@ const FeaturedProduct: React.FC<FeaturedProductProps> = ({ product }) => {
         <div className="mt-4 md:mt-3 flex flex-col gap-2 sm:flex-row sm:gap-2">
           <Link
             href={`/products/${slug}`}
-            className="flex-1 flex items-center justify-center rounded-lg bg-[#4b2e22] py-2 px-3 text-sm font-semibold text-[#fff8ed] transition-colors duration-300 hover:bg-[#1f274a] whitespace-nowrap"
+            className="flex-1 flex items-center justify-center rounded-lg bg-[#4b2e22] py-2 px-3 text-sm font-semibold text-[#fff8ed] transition-colors duration-300 hover:bg-[#382117] whitespace-nowrap"
           >
             Add to Cart
           </Link>

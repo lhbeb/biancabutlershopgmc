@@ -18,7 +18,7 @@ export default function ProductStripeExpressCheckout({
     <button
       type="button"
       onClick={onNeedsAddress}
-      className="w-full bg-transparent border-2 border-[#4b2e22] hover:border-[#1f274a] text-[#4b2e22] hover:text-[#1f274a] py-4 px-6 rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full bg-transparent border-2 border-[#4b2e22] hover:border-[#382117] text-[#4b2e22] hover:text-[#382117] py-4 px-6 rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
     >
       <Zap className="h-5 w-5 mr-2" />
       {label}

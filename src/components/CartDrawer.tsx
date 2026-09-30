@@ -182,7 +182,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center gap-2 rounded-xl border border-[#4b2e22]/10 bg-[#eef7fb] px-4 py-3 text-xs font-medium text-[#4b2e22]">
+              <div className="mt-4 flex items-center gap-2 rounded-xl border border-[#4b2e22]/10 bg-[#F7F0E6] px-4 py-3 text-xs font-medium text-[#4b2e22]">
                 <span>Free shipping across the United States</span>
               </div>
 
@@ -208,7 +208,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             <button
               onClick={handleCheckout}
               disabled={isCheckingOut}
-              className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#4b2e22] px-6 py-4 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f274a] disabled:cursor-not-allowed disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#4b2e22] px-6 py-4 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#382117] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isCheckingOut ? (
                 <>
