@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import Hero from '@/components/Hero';
-import SameDayShipping from '@/components/SameDayShipping';
 import ProductGrid from '@/components/ProductGrid';
 import HomeReviews from '@/components/HomeReviews';
 import CategorySection from '@/components/CategorySection';
@@ -45,8 +44,6 @@ export default async function HomePage() {
         visitorShuffleKey="home-featured"
       />
 
-      <SameDayShipping />
-
       {featuredFinds.length > 0 && (
         <Suspense fallback={null}>
           <ProductGrid
@@ -76,11 +73,13 @@ export default async function HomePage() {
         </Suspense>
       )}
 
-      <HomeReviews
-        reviews={homeReviews}
-        averageRating={homeReviewsStats.averageRating}
-        totalReviews={homeReviewsStats.totalReviews}
-      />
+      <div style={{ display: 'none' }} aria-hidden="true">
+        <HomeReviews
+          reviews={homeReviews}
+          averageRating={homeReviewsStats.averageRating}
+          totalReviews={homeReviewsStats.totalReviews}
+        />
+      </div>
     </>
   );
   } catch (error) {

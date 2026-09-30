@@ -4,6 +4,7 @@ import { DM_Sans, DM_Serif_Text } from "next/font/google";
 import "./globals.css";
 import ClientHeader from "@/components/ClientHeader";
 import Footer from "@/components/Footer";
+import SameDayShipping from "@/components/SameDayShipping";
 import NewsletterSection from "@/components/NewsletterSection";
 import InstagramSection from "@/components/InstagramSection";
 import ErrorBoundaryWrapper from "@/components/ErrorBoundary";
@@ -213,6 +214,7 @@ export default function RootLayout({
               </Suspense>
               <NewsletterSection />
               <div className="h-4 bg-white md:h-6" aria-hidden="true" />
+              <SameDayShipping />
               <Footer />
             </div>
             <CookieConsent />
