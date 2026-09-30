@@ -15,10 +15,6 @@ interface HeroTile {
   alt: string;
 }
 
-function normalize(value?: string) {
-  return value?.trim().toLowerCase() ?? '';
-}
-
 function isEligibleProduct(product: Product, excludedSlugs: Set<string>) {
   return Boolean(
     product.slug &&
@@ -29,21 +25,14 @@ function isEligibleProduct(product: Product, excludedSlugs: Set<string>) {
   );
 }
 
-function findProductByTerms(
+function findProductByCategory(
   products: Product[],
-  terms: string[],
+  category: string,
   excludedSlugs: Set<string> = new Set(),
 ) {
   return products.find((product) => {
     if (!isEligibleProduct(product, excludedSlugs)) return false;
-
-    const searchable = `${normalize(product.title)} ${normalize(product.brand)} ${normalize(product.category)} ${(
-      product.collections ?? []
-    )
-      .map(normalize)
-      .join(' ')}`;
-
-    return terms.some((term) => searchable.includes(normalize(term)));
+    return product.category?.trim().toLowerCase() === category.toLowerCase();
   });
 }
 
@@ -54,8 +43,8 @@ function productHref(product: Product) {
 function createTile(
   product: Product | undefined,
   label: string,
-  title: string,
-  cta = 'View Product',
+  title = product?.title ?? '',
+  cta = 'View piece',
 ): HeroTile | null {
   if (!product?.images?.[0] || !product.slug) return null;
 
@@ -80,50 +69,27 @@ export default function Hero({ products = [] }: HeroProps) {
 
   const usedSlugs = new Set<string>();
 
-  const flagship =
-    findProductByTerms(availableProducts, ['figurine', 'sculpture', 'decor', 'vintage'], usedSlugs) ??
-    availableProducts[0];
+  const flagship = findProductByCategory(availableProducts, 'Collectible Figurines', usedSlugs) ?? availableProducts[0];
   addUsedSlug(flagship, usedSlugs);
 
-  const beanToCup =
-    findProductByTerms(availableProducts, ['collectible', 'ornament', 'ceramic'], usedSlugs) ??
-    availableProducts.find((product) => isEligibleProduct(product, usedSlugs));
-  addUsedSlug(beanToCup, usedSlugs);
+  const sculpture = findProductByCategory(availableProducts, 'Sculptures & Statues', usedSlugs);
+  addUsedSlug(sculpture, usedSlugs);
 
-  const compactEspresso =
-    findProductByTerms(availableProducts, ['small', 'accent', 'object'], usedSlugs) ??
-    availableProducts.find((product) => isEligibleProduct(product, usedSlugs));
-  addUsedSlug(compactEspresso, usedSlugs);
+  const artwork = findProductByCategory(availableProducts, 'Art & Prints', usedSlugs);
+  addUsedSlug(artwork, usedSlugs);
 
-  const brewer =
-    findProductByTerms(availableProducts, ['vintage', 'antique', 'home'], usedSlugs) ??
-    availableProducts.find((product) => isEligibleProduct(product, usedSlugs));
+  const anotherFigurine = findProductByCategory(availableProducts, 'Collectible Figurines', usedSlugs);
 
   const tiles = [
     createTile(
       flagship,
-      'Featured antiques',
-      'Collected pieces for a distinctive home',
-      'Shop Now',
+      'Collectible figurines',
+      'Figurines with a story to tell',
+      'View figurine',
     ),
-    createTile(
-      beanToCup,
-      'Figurines & objects',
-      'Small pieces with a strong point of view',
-      'View Product',
-    ),
-    createTile(
-      compactEspresso,
-      'Vintage accents',
-      'A little history for every room',
-      'View Product',
-    ),
-    createTile(
-      brewer,
-      'Curated decor',
-      'Collected with care by Bianca Butler',
-      'View Product',
-    ),
+    createTile(sculpture, 'Sculptures & statues'),
+    createTile(artwork, 'Art & prints'),
+    createTile(anotherFigurine, 'More from the collection'),
   ].filter((tile): tile is HeroTile => Boolean(tile));
 
   if (tiles.length === 0) return null;
@@ -177,7 +143,7 @@ export default function Hero({ products = [] }: HeroProps) {
                 >
                   <div className="flex flex-col justify-center p-5">
                     <p className="text-sm font-semibold text-[#4b2e22]">{secondaryTile.label}</p>
-                    <h2 className="mt-3 text-2xl font-bold leading-tight text-[#261810] md:text-[1.9rem]">
+                    <h2 className="mt-3 line-clamp-2 text-xl font-bold leading-tight text-[#261810] md:text-[1.65rem]">
                       {secondaryTile.title}
                     </h2>
                     <span className="mt-3 inline-flex w-fit items-center rounded-lg bg-[#4b2e22] px-5 py-2.5 text-sm font-bold text-[#fff8ed] transition-colors group-hover:bg-[#2f1b12]">

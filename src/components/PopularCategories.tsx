@@ -2,9 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/types/product';
 import {
-  filterProductsByCategory,
   POPULAR_CATEGORY_NAMES,
-  POPULAR_CATEGORY_IMAGES,
   CATALOG_NAVIGATION,
 } from '@/config/categories';
 
@@ -14,13 +12,13 @@ interface PopularCategoriesProps {
 
 export default function PopularCategories({ products }: PopularCategoriesProps) {
   const categories = POPULAR_CATEGORY_NAMES.map((name) => {
-    const categoryProducts = filterProductsByCategory(products, name);
+    const categoryProducts = products.filter(
+      (product) => product.category?.trim().toLowerCase() === name.toLowerCase(),
+    );
     const navItem = CATALOG_NAVIGATION.find(item => item.label.toLowerCase() === name.toLowerCase());
     const href = navItem?.href || `/search?category=${encodeURIComponent(name)}`;
 
-    const image =
-      POPULAR_CATEGORY_IMAGES[name] ||
-      categoryProducts.find((product) => product.images?.[0])?.images[0];
+    const image = categoryProducts.find((product) => product.images?.[0])?.images[0];
 
     return {
       name,
@@ -45,7 +43,7 @@ export default function PopularCategories({ products }: PopularCategoriesProps) 
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {categories.map((category) => (
               <Link
                 key={category.name}

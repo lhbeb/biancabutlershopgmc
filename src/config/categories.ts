@@ -15,46 +15,30 @@ export const CATALOG_NAVIGATION: readonly CategoryNavItem[] = [
     description: 'Explore the complete Bianca Butler collection of antiques and decorative finds.',
   },
   {
-    label: 'Figurines',
-    href: '/search?category=Figurines',
-    categoryKey: 'figurines',
-    description: 'Characterful figurines, sculptures, and small collected objects for display.',
+    label: 'Collectible Figurines',
+    href: '/search?category=Collectible%20Figurines',
+    categoryKey: 'collectible-figurines',
+    description: 'Porcelain and decorative figurines selected for collectors and distinctive displays.',
   },
   {
-    label: 'Decor',
-    href: '/search?category=Decor',
-    categoryKey: 'decor',
-    description: 'Decorative pieces that bring texture, history, and personality to a room.',
+    label: 'Sculptures & Statues',
+    href: '/search?category=Sculptures%20%26%20Statues',
+    categoryKey: 'sculptures-statues',
+    description: 'Sculptural objects and statues in a range of materials, subjects, and styles.',
   },
   {
-    label: 'Vintage Finds',
-    href: '/search?category=Vintage%20Finds',
-    categoryKey: 'vintage-finds',
-    description: 'Distinctive vintage home accents chosen for their character and patina.',
-  },
-  {
-    label: 'Collectibles',
-    href: '/search?category=Collectibles',
-    categoryKey: 'collectibles',
-    description: 'Memorable objects and curiosities for collectors and thoughtful gifting.',
-  },
-  {
-    label: 'Curated Finds',
-    href: '/search?category=Curated%20Finds',
-    categoryKey: 'curated-finds',
-    description: 'A rotating edit of unusual pieces that deserve a second look.',
+    label: 'Art & Prints',
+    href: '/search?category=Art%20%26%20Prints',
+    categoryKey: 'art-prints',
+    description: 'Original artworks, prints, and photographs for collectors and art lovers.',
   },
 ] as const;
 
 export const POPULAR_CATEGORY_NAMES = [
-  'Figurines',
-  'Decor',
-  'Vintage Finds',
-  'Collectibles',
-  'Curated Finds',
+  'Collectible Figurines',
+  'Sculptures & Statues',
+  'Art & Prints',
 ] as const;
-
-export const POPULAR_CATEGORY_IMAGES: Record<string, string> = {};
 
 /**
  * Filter antique products by category, collection, or search term.
