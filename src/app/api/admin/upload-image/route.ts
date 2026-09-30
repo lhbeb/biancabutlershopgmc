@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabaseAdmin } from '@/lib/supabase/server';
-import { productImageProxyUrl } from '@/lib/productImageUrls';
+import { productImageStorageUrl } from '@/lib/productImageUrls';
 
 // Maximum file size: 10MB (adjust as needed)
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB in bytes
@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
       }
 
       return NextResponse.json({
-        url: productImageProxyUrl(path),
+        url: productImageStorageUrl(path),
         path: data.path,
       });
     } catch (error: any) {
