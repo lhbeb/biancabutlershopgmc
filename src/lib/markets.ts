@@ -31,11 +31,11 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     shipsFrom: 'United States',
     shipsFromFlag: '🇺🇸',
     deliveryDaysMin: 5,
-    deliveryDaysMax: 9,
+    deliveryDaysMax: 6,
     freeShippingText: 'Free standard shipping',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders placed before 2:00 PM EST often ship the same day. Standard processing is 0 to 1 business day, then most US deliveries arrive in 5 to 9 business days.',
+      'US orders are processed within 1 business day, then typically take 4 to 5 business days in transit (about 5 to 6 business days total).',
     faqFreeShippingAnswer:
       'Yes, standard shipping is currently free across the United States. If faster delivery is available, you\'ll see those options at checkout.',
   },
@@ -48,11 +48,11 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     shipsFrom: 'Europe',
     shipsFromFlag: '🇪🇺',
     deliveryDaysMin: 5,
-    deliveryDaysMax: 10,
+    deliveryDaysMax: 6,
     freeShippingText: 'Free delivery across Europe',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders within the European Union are processed within 1 business day and typically arrive in 5 to 10 business days depending on your country.',
+      'Orders are processed within 1 business day, then typically take 4 to 5 business days in transit.',
     faqFreeShippingAnswer:
       'Yes, standard delivery is free across the European Union. Express options may be available at checkout.',
   },
@@ -65,11 +65,11 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     shipsFrom: 'Canada',
     shipsFromFlag: '🇨🇦',
     deliveryDaysMin: 5,
-    deliveryDaysMax: 10,
+    deliveryDaysMax: 6,
     freeShippingText: 'Free standard shipping across Canada',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders within Canada are processed within 1 business day and typically arrive in 5 to 10 business days.',
+      'Orders are processed within 1 business day, then typically take 4 to 5 business days in transit.',
     faqFreeShippingAnswer:
       'Yes, standard shipping is free across Canada. Faster delivery options may be available at checkout.',
   },
@@ -82,11 +82,11 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     shipsFrom: 'Australia',
     shipsFromFlag: '🇦🇺',
     deliveryDaysMin: 5,
-    deliveryDaysMax: 10,
+    deliveryDaysMax: 6,
     freeShippingText: 'Free standard shipping across Australia',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders within Australia are processed within 1 business day and typically arrive in 5 to 10 business days.',
+      'Orders are processed within 1 business day, then typically take 4 to 5 business days in transit.',
     faqFreeShippingAnswer:
       'Yes, standard shipping is free across Australia. Express options may be available at checkout.',
   },
@@ -120,10 +120,20 @@ export function formatMarketPrice(price: number, market: MarketConfig): string {
  */
 export function getDeliveryRange(market: MarketConfig): string {
   const today = new Date();
-  const start = new Date(today);
-  const end = new Date(today);
-  start.setDate(today.getDate() + market.deliveryDaysMin);
-  end.setDate(today.getDate() + market.deliveryDaysMax);
+  const addBusinessDays = (days: number) => {
+    const date = new Date(today);
+    let added = 0;
+
+    while (added < days) {
+      date.setDate(date.getDate() + 1);
+      if (date.getDay() !== 0 && date.getDay() !== 6) added += 1;
+    }
+
+    return date;
+  };
+
+  const start = addBusinessDays(market.deliveryDaysMin);
+  const end = addBusinessDays(market.deliveryDaysMax);
 
   const locale = market.locale;
   if (start.getMonth() === end.getMonth()) {

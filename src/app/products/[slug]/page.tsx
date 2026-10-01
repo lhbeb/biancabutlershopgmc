@@ -182,14 +182,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               "@type": "ShippingDeliveryTime",
               "handlingTime": {
                 "@type": "QuantitativeValue",
-                "minValue": 0,
+                "minValue": 1,
                 "maxValue": 1,
                 "unitCode": "DAY"
               },
               "transitTime": {
                 "@type": "QuantitativeValue",
-                "minValue": 5,
-                "maxValue": 9,
+                "minValue": 4,
+                "maxValue": 5,
                 "unitCode": "DAY"
               }
             }

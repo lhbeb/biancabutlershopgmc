@@ -171,7 +171,7 @@ Common GMC errors and fixes:
 **Feed URL:** https://takimia.com/api/feed/google?country=US&currency=USD  
 **Update Frequency:** Real-time (no caching)  
 **Supported Markets:** US only (USD)  
-**Shipping:** Free Standard Shipping (5-9 days transit)
+**Shipping:** Free Standard Shipping (1 business day processing; 4-5 business days transit)
 
 ### Feed Fields Included:
 - `g:id` - Product SKU

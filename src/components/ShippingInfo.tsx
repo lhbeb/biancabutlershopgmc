@@ -36,6 +36,7 @@ const ShippingInfo: React.FC<ShippingInfoProps> = ({ className = '', targetMarke
             <div className="min-w-0">
               <p className="text-sm font-medium text-[#806D60]">Estimated delivery</p>
               <p className="mt-1 text-sm font-semibold text-[#261810]">Get it by {deliveryRange}</p>
+              <p className="mt-1 text-sm text-[#68554A]">1 business day processing · 4-5 business days in transit</p>
               <p className="mt-1 text-sm text-[#68554A]">{market.freeShippingText}</p>
             </div>
           </div>

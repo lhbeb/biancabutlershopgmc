@@ -200,7 +200,7 @@ function ThankYouContent() {
                 </div>
                 <div className="text-left">
                   <h3 className="font-medium text-[#261810]">Shipping</h3>
-                  <p className="text-sm text-gray-600">Your order will arrive within 5-9 business days</p>
+                  <p className="text-sm text-gray-600">Allow 1 business day for processing, then 4-5 business days in transit.</p>
                 </div>
               </div>
             </div>

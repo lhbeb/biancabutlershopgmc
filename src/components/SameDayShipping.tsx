@@ -60,7 +60,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
                 Fast, Reliable Delivery
               </h3>
               <p className="text-gray-600 text-sm">
-                We process orders promptly and prepare each package with the care delicate decorative pieces deserve.
+                Orders are processed within 1 business day and prepared with the care delicate decorative pieces deserve.
               </p>
             </div>
           </div>

@@ -5,13 +5,13 @@ import { Clock, Mail, MapPin, PackageCheck, Phone, ShieldCheck, Truck } from 'lu
 export const metadata: Metadata = {
   title: 'Shipping Policy | Bianca Butler',
   description:
-    'Official Bianca Butler Shipping Policy. Free standard shipping across the United States. Same-day processing for orders placed before 2:00 PM EST.',
+    'Bianca Butler offers free standard US shipping. Orders are processed within 1 business day and take 4-5 business days in transit.',
 };
 
 const timeline = [
-  ['Same-day orders', 'Ships same day when placed before 2:00 PM EST'],
-  ['Standard processing', '0-1 business day'],
-  ['United States delivery', '5-9 business days (Free Standard Shipping)'],
+  ['Order processing', 'Within 1 business day'],
+  ['United States transit', '4-5 business days after processing'],
+  ['Estimated total delivery', 'About 5-6 business days'],
 ];
 
 const policySections = [
@@ -61,7 +61,7 @@ export default function ShippingPolicyPage() {
         'url': 'https://biancabutler.shop/shipping-policy',
         'name': 'Shipping Policy | Bianca Butler',
         'description':
-          'Bianca Butler Shipping Policy: Free standard shipping across the United States. Same-day processing for orders placed before 2:00 PM EST.',
+          'Bianca Butler offers free standard US shipping. Orders are processed within 1 business day and take 4-5 business days in transit.',
       },
       {
         '@type': 'OfferShippingDetails',
@@ -79,17 +79,16 @@ export default function ShippingPolicyPage() {
           '@type': 'ShippingDeliveryTime',
           'handlingTime': {
             '@type': 'QuantitativeValue',
-            'minValue': 0,
+            'minValue': 1,
             'maxValue': 1,
             'unitCode': 'DAY',
           },
           'transitTime': {
             '@type': 'QuantitativeValue',
-            'minValue': 5,
-            'maxValue': 9,
+            'minValue': 4,
+            'maxValue': 5,
             'unitCode': 'DAY',
           },
-          'cutoffTime': '14:00:00-05:00',
         },
       },
     ],
@@ -120,9 +119,9 @@ export default function ShippingPolicyPage() {
         <section className="mb-8 grid gap-4 md:grid-cols-3">
           <div className="rounded-xl border border-[#4b2e22]/10 bg-white p-5 shadow-sm">
             <Clock className="mb-4 h-6 w-6 text-[#4b2e22]" />
-            <h2 className="text-lg font-bold text-[#261810]">Order by 2:00 PM EST</h2>
+            <h2 className="text-lg font-bold text-[#261810]">Order Processing</h2>
             <p className="mt-2 text-sm leading-6 text-gray-600">
-              Orders placed before the 2:00 PM EST cutoff are processed, packed, and shipped the same business day.
+              Orders are prepared for shipment within 1 business day.
             </p>
           </div>
           <div className="rounded-xl border border-[#4b2e22]/10 bg-white p-5 shadow-sm">
@@ -145,10 +144,10 @@ export default function ShippingPolicyPage() {
           <div className="flex flex-col gap-3 border-b border-gray-100 pb-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="text-2xl font-bold text-[#261810]">Delivery Timelines</h2>
-              <p className="mt-2 text-sm text-gray-600">Same-day dispatch applies to orders placed before 2:00 PM EST on business days.</p>
+              <p className="mt-2 text-sm text-gray-600">Orders are processed within 1 business day, followed by 4-5 business days in transit.</p>
             </div>
             <span className="inline-flex w-fit rounded-full bg-[#d4a84f] px-3.5 py-1 text-sm font-semibold text-[#4b2e22]">
-              Same-day dispatch cutoff: 2:00 PM EST
+              4-5 business days in transit
             </span>
           </div>
 
