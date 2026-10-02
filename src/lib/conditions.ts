@@ -186,9 +186,9 @@ export function formatBiancaButlerGmcId(
   product: { sku?: string; slug?: string; id?: string | number },
   fallbackSlug?: string,
 ): string {
-  const prefix = 'TAKIMIA';
+  const prefix = 'BIANCA';
   const rawSku = formatValidSku(product, fallbackSlug)
-    .replace(/^TAKIMIA[-_]*/i, '')
+    .replace(/^(?:BIANCA|TAKIMIA)[-_]*/i, '')
     .replace(/[^a-zA-Z0-9_-]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '')
@@ -199,7 +199,8 @@ export function formatBiancaButlerGmcId(
     .replace(/^-|-$/g, '')
     .toUpperCase();
 
-  return `${prefix}-${suffix}`.slice(0, 50).replace(/-+$/g, '');
+  const maxSuffixLength = 50 - prefix.length - 1;
+  return `${prefix}-${suffix.slice(0, maxSuffixLength)}`.replace(/-+$/g, '');
 }
 
 

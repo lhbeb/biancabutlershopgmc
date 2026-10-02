@@ -1,7 +1,7 @@
 import { getProductBySlug } from '@/lib/data';
 import { getReviewProduct, isReviewProduct } from '@/lib/reviewProducts';
 import { getOtherSellerReviews } from '@/lib/supabase/sellers';
-import { formatValidSku, mapConditionToSchema } from '@/lib/conditions';
+import { formatBiancaButlerGmcId, mapConditionToSchema } from '@/lib/conditions';
 import { merchantBrand, sanitizeMerchantCopy } from '@/lib/merchantCopy';
 import { notFound } from 'next/navigation';
 import ProductPageClient from './ProductPageClient';
@@ -68,7 +68,7 @@ export async function generateMetadata(
         'product:price:currency': currencyCode,
         'product:availability': inStock ? 'in stock' : 'out of stock',
         'product:brand': safeBrand,
-        'product:retailer_item_id': product.slug || '',
+        'product:retailer_item_id': formatBiancaButlerGmcId(product, product.slug),
       },
     };
   } catch (error) {
@@ -139,7 +139,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         "name": p.brand || ''
       },
       "category": p.category || '',
-      "sku": formatValidSku(p, slug),
+      "sku": formatBiancaButlerGmcId(p, slug),
       "offers": {
         "@type": "Offer",
         "price": p.price || 0,
