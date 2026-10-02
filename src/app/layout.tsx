@@ -68,13 +68,9 @@ export const metadata: Metadata = {
     images: ["/g7x.jpeg"],
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' },
-      { url: '/icon.png', type: 'image/png' },
-    ],
-    apple: '/apple-touch-icon.png',
-    shortcut: '/favicon.ico',
+    icon: '/bianca-favicon-20261002.png',
+    apple: '/bianca-apple-touch-icon-20261002.png',
+    shortcut: '/bianca-favicon-20261002.png',
   },
   robots: {
     index: true,
@@ -97,9 +93,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preload" href="/logosvg.svg" as="image" type="image/svg+xml" />
         {/* Facebook Domain Verification */}
         <meta name="facebook-domain-verification" content="k3ytyf6hqaa462mz10uzwnmugj0d0o" />
