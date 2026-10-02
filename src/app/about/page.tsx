@@ -241,7 +241,7 @@ export default function AboutPage() {
               { value: '5,000+', label: 'happy customers' },
               { value: '1,000+', label: 'machines sold' },
               { value: '99%', label: 'satisfaction rate' },
-              { value: '24/7', label: 'support available' },
+              { value: 'Mon–Fri', label: 'support availability' },
             ].map(({ value, label }) => (
               <div key={label} className="text-center p-6 bg-[#fff8ed]/10 backdrop-blur-sm rounded-xl border border-[#fff8ed]/20">
                 <div className="text-4xl font-bold mb-2">{value}</div>
