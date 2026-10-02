@@ -37,17 +37,21 @@ function loadTrackingScript(): Promise<void> {
     const existingScript = document.querySelector(
       `script[src="${TRACKING_SCRIPT_SRC}"]`,
     ) as HTMLScriptElement | null;
+    let script: HTMLScriptElement | null = null;
 
     const handleLoaded = () => {
       if (window.YQV5) {
         resolve();
       } else {
+        trackingScriptPromise = null;
+        (existingScript || script)?.remove();
         reject(new Error("Tracking provider loaded, but the tracker is unavailable."));
       }
     };
 
     const handleError = () => {
       trackingScriptPromise = null;
+      (existingScript || script)?.remove();
       reject(new Error("Failed to load the tracking system."));
     };
 
@@ -62,7 +66,7 @@ function loadTrackingScript(): Promise<void> {
       return;
     }
 
-    const script = document.createElement("script");
+    script = document.createElement("script");
     script.src = TRACKING_SCRIPT_SRC;
     script.async = true;
     script.onload = () => {
