@@ -111,12 +111,12 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             Browse the collection and discover your next favorite find
           </p>
         </div>
-        <a
-          href="#products"
+        <Link
+          href="/#products"
           className="bg-[#4b2e22] hover:bg-[#382117] text-[#fff8ed] font-bold py-4 px-10 rounded-xl text-lg transition-colors whitespace-nowrap"
         >
           Browse Products
-        </a>
+        </Link>
       </div>
     </div>
   );

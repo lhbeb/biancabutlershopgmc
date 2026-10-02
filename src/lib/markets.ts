@@ -115,31 +115,9 @@ export function formatMarketPrice(price: number, market: MarketConfig): string {
   return `${market.currencySymbol}${formatted}`;
 }
 
-/**
- * Get estimated delivery date range string for a market.
- */
-export function getDeliveryRange(market: MarketConfig): string {
-  const today = new Date();
-  const addBusinessDays = (days: number) => {
-    const date = new Date(today);
-    let added = 0;
-
-    while (added < days) {
-      date.setDate(date.getDate() + 1);
-      if (date.getDay() !== 0 && date.getDay() !== 6) added += 1;
-    }
-
-    return date;
-  };
-
-  const start = addBusinessDays(market.deliveryDaysMin);
-  const end = addBusinessDays(market.deliveryDaysMax);
-
-  const locale = market.locale;
-  if (start.getMonth() === end.getMonth()) {
-    return `${start.getDate()}–${end.getDate()} ${start.toLocaleString(locale, { month: 'long' })}`;
-  }
-  return `${start.getDate()} ${start.toLocaleString(locale, { month: 'long' })} – ${end.getDate()} ${end.toLocaleString(locale, { month: 'long' })}`;
+/** Returns the policy-aligned total delivery window without implying a guaranteed date. */
+export function getDeliveryDuration(market: MarketConfig): string {
+  return `${market.deliveryDaysMin}–${market.deliveryDaysMax} business days`;
 }
 
 export const MARKET_OPTIONS = [

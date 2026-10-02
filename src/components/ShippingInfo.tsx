@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Truck, RefreshCw } from 'lucide-react';
-import { getMarket, getDeliveryRange } from '@/lib/markets';
+import { getMarket, getDeliveryDuration } from '@/lib/markets';
 
 interface ShippingInfoProps {
   className?: string;
@@ -9,7 +9,7 @@ interface ShippingInfoProps {
 
 const ShippingInfo: React.FC<ShippingInfoProps> = ({ className = '', targetMarket }) => {
   const market = getMarket(targetMarket);
-  const deliveryRange = getDeliveryRange(market);
+  const deliveryDuration = getDeliveryDuration(market);
 
   return (
     <div className={`overflow-hidden rounded-[24px] border border-[#E9DED2] bg-white ${className}`}>
@@ -34,9 +34,8 @@ const ShippingInfo: React.FC<ShippingInfoProps> = ({ className = '', targetMarke
               <Truck className="h-4 w-4" />
             </div>
             <div className="min-w-0">
-              <p className="text-sm font-medium text-[#806D60]">Estimated delivery</p>
-              <p className="mt-1 text-sm font-semibold text-[#261810]">Get it by {deliveryRange}</p>
-              <p className="mt-1 text-sm text-[#68554A]">1 business day processing · 4-5 business days in transit</p>
+              <p className="text-sm font-medium text-[#806D60]">Delivery</p>
+              <p className="mt-1 text-sm font-semibold text-[#261810]">{deliveryDuration}</p>
               <p className="mt-1 text-sm text-[#68554A]">{market.freeShippingText}</p>
             </div>
           </div>
@@ -50,7 +49,6 @@ const ShippingInfo: React.FC<ShippingInfoProps> = ({ className = '', targetMarke
             <div className="min-w-0">
               <p className="text-sm font-medium text-[#806D60]">Returns</p>
               <p className="mt-1 text-sm font-semibold text-[#261810]">{market.returnsText}</p>
-              <p className="mt-1 text-sm text-[#68554A]">Hassle-free returns</p>
             </div>
           </div>
         </div>
