@@ -26,7 +26,8 @@ Footer: /src/components/Footer.tsx
 Checkout: /src/app/checkout/page.tsx
 Current Configuration
 
-Business Address: 680 N Golden Key St, Gilbert Arizona 85233 United States
+Business Address: 301 Roundhill Dr, Rockaway, NJ 07866, United States
+Business Phone: +1 (562) 451-5530
 Tech Stack: Next.js 15, TypeScript, Tailwind CSS
 Supported Countries: US, Canada, UK, Australia, Netherlands
 

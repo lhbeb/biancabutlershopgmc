@@ -155,18 +155,24 @@ export default function RootLayout({
                 "logo": "https://biancabutler.shop/logosvg.svg",
                 "description": "Bianca Butler is an antiques shop offering figurines, decorative objects, vintage accents, and collectible finds.",
                 "sameAs": [
-                  "https://www.instagram.com/",
-                  "https://www.pinterest.com/",
-                  "https://www.tiktok.com/"
+                  "https://www.instagram.com/biancabutler.shop",
+                  "https://www.pinterest.com/biancabutlershop",
+                  "https://www.tiktok.com/@biancabutler.shop",
+                  "https://x.com/heybiancashop"
                 ],
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "contactType": "customer service",
                   "email": "contact@biancabutler.shop",
+                  "telephone": "+1-562-451-5530",
                   "areaServed": ["US"]
                 },
                 "address": {
                   "@type": "PostalAddress",
+                  "streetAddress": "301 Roundhill Dr",
+                  "addressLocality": "Rockaway",
+                  "addressRegion": "NJ",
+                  "postalCode": "07866",
                   "addressCountry": "US"
                 }
               })

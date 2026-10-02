@@ -36,7 +36,7 @@ export default function WarrantyReplacementPage() {
         </section>
         <section className="space-y-4 rounded-2xl bg-white p-6 shadow-sm sm:p-8">
           <h2 className="text-2xl font-bold text-[#261810]">Contact support</h2>
-          <p>Email <a className="font-semibold text-[#4b2e22] underline" href="mailto:contact@biancabutler.shop">contact@biancabutler.shop</a> or call +1 (786) 302-5205, Monday through Friday, 9:00 AM–5:00 PM EST.</p>
+          <p>Email <a className="font-semibold text-[#4b2e22] underline" href="mailto:contact@biancabutler.shop">contact@biancabutler.shop</a> or call <a className="font-semibold text-[#4b2e22] underline" href="tel:+15624515530">+1 (562) 451-5530</a>, Monday through Friday, 9:00 AM–5:00 PM EST.</p>
           <p>This policy should be read together with the <a className="font-semibold text-[#4b2e22] underline" href="/return-policy">Return & Exchange Policy</a>.</p>
         </section>
       </article>

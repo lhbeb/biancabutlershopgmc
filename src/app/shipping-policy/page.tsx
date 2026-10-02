@@ -194,8 +194,8 @@ export default function ShippingPolicyPage() {
             </div>
             <div className="flex items-center gap-3 rounded-xl bg-[#F5F7FB] p-4">
               <Phone className="h-5 w-5 text-[#4b2e22]" />
-              <a href="tel:+17863025205" className="text-sm font-medium text-[#261810] hover:underline">
-                +1 (786) 302-5205
+              <a href="tel:+15624515530" className="text-sm font-medium text-[#261810] hover:underline">
+                +1 (562) 451-5530
               </a>
             </div>
             <div className="flex items-center gap-3 rounded-xl bg-[#F5F7FB] p-4">

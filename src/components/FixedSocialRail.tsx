@@ -18,13 +18,13 @@ const LEGAL_PAGE_PATHS = new Set([
 const socialLinks = [
   {
     name: 'Instagram',
-    href: 'https://www.instagram.com/',
+    href: 'https://www.instagram.com/biancabutler.shop',
     className: 'bg-[#C94775] text-white hover:bg-[#B73C68]',
     icon: <Instagram className="h-4 w-4" aria-hidden="true" />,
   },
   {
     name: 'Pinterest',
-    href: 'https://www.pinterest.com/',
+    href: 'https://www.pinterest.com/biancabutlershop',
     className: 'bg-[#D8222F] text-white hover:bg-[#C51D29]',
     icon: (
       <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -34,11 +34,21 @@ const socialLinks = [
   },
   {
     name: 'TikTok',
-    href: 'https://www.tiktok.com/',
+    href: 'https://www.tiktok.com/@biancabutler.shop',
     className: 'bg-black text-white hover:bg-[#111827]',
     icon: (
       <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+      </svg>
+    ),
+  },
+  {
+    name: 'X',
+    href: 'https://x.com/heybiancashop',
+    className: 'bg-black text-white hover:bg-[#222222]',
+    icon: (
+      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.41L5.57 22H2.44l7.25-8.29L1.8 2h6.4l4.43 6.76L18.9 2Zm-1.1 18h1.73L7.29 3.89H5.43L17.8 20Z" />
       </svg>
     ),
   },

@@ -41,16 +41,17 @@ export default function ContactPage() {
           {
             '@type': 'ContactPoint',
             'contactType': 'customer service',
+            'telephone': '+1-562-451-5530',
             'areaServed': ['US'],
             'availableLanguage': ['en'],
           },
         ],
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': 'Contact Bianca Butler through contact@biancabutler.shop',
-          'addressLocality': 'Gilbert',
-          'addressRegion': 'AZ',
-          'postalCode': '85233',
+          'streetAddress': '301 Roundhill Dr',
+          'addressLocality': 'Rockaway',
+          'addressRegion': 'NJ',
+          'postalCode': '07866',
           'addressCountry': 'US',
         },
       },
@@ -213,14 +214,14 @@ export default function ContactPage() {
                       <MapPin className="h-6 w-6 text-[#4b2e22] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#261810]">Business Address</h3>
-                        <p className="text-gray-600 mt-1">Contact us by email for shop and order enquiries.</p>
+                        <address className="text-gray-600 mt-1 not-italic">301 Roundhill Dr, Rockaway, NJ 07866, United States</address>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Phone className="h-6 w-6 text-[#4b2e22] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#261810]">Phone Support</h3>
-                        <p className="text-gray-600 mt-1">Email is the quickest way to reach Bianca Butler.</p>
+                        <a href="tel:+15624515530" className="text-gray-600 mt-1 inline-block hover:underline">+1 (562) 451-5530</a>
                       </div>
                     </div>
                     <div className="flex items-start">

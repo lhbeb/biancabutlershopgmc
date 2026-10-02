@@ -62,7 +62,7 @@ export const STORE_FAQS: readonly StoreFaq[] = [
   {
     question: 'How can I contact Bianca Butler?',
     answer:
-      'You can use our contact form, email contact@biancabutler.shop, or call +1(786) 302-5205 during published support hours.',
+      'You can use our contact form, email contact@biancabutler.shop, or call +1 (562) 451-5530 during published support hours.',
     linkHref: '/contact',
     linkLabel: 'Contact our team',
   },

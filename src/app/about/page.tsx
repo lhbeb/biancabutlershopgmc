@@ -53,16 +53,16 @@ export default function AboutPage() {
         'email': 'contact@biancabutler.shop',
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': 'Contact Bianca Butler through contact@biancabutler.shop',
-          'addressLocality': 'Gilbert',
-          'addressRegion': 'AZ',
-          'postalCode': '85233',
+          'streetAddress': '301 Roundhill Dr',
+          'addressLocality': 'Rockaway',
+          'addressRegion': 'NJ',
+          'postalCode': '07866',
           'addressCountry': 'US',
         },
         'contactPoint': [
           {
             '@type': 'ContactPoint',
-            'telephone': '',
+            'telephone': '+1-562-451-5530',
             'contactType': 'customer service',
             'areaServed': ['US'],
             'availableLanguage': ['en'],
@@ -202,7 +202,7 @@ export default function AboutPage() {
                 <Leaf className="h-6 w-6 text-[#4b2e22]" />
                 <h3 className="text-xl font-bold text-[#261810]">US-Based and Reliable</h3>
               </div>
-              <p className="text-gray-700">We ship from within the United States with fast processing times. Local pickup is available from our Gilbert, Arizona location for eligible orders.</p>
+              <p className="text-gray-700">We ship from within the United States with fast processing times. Local pickup is available from our Rockaway, New Jersey location for eligible orders.</p>
             </div>
           </div>
         </div>
@@ -265,7 +265,7 @@ export default function AboutPage() {
                 <MapPin className="h-5 w-5 text-[#4b2e22]" />
                 <div className="font-medium text-[#261810]">Business Address</div>
               </div>
-              <div className="text-gray-600 ml-8">Contact Bianca Butler through contact@biancabutler.shop for current business details.</div>
+              <div className="text-gray-600 ml-8">301 Roundhill Dr, Rockaway, NJ 07866, United States</div>
             </div>
             <div className="bg-[#fff8ed] rounded-xl p-6 border border-[#4b2e22]/10">
               <div className="flex items-center gap-3 mb-3">
@@ -273,8 +273,8 @@ export default function AboutPage() {
                 <div className="font-medium text-[#261810]">Phone</div>
               </div>
               <div className="ml-8 text-gray-600">
-                <a href="tel:+17863025205" className="hover:text-[#4b2e22] transition-colors">
-                  +1 (786) 302-5205
+                <a href="tel:+15624515530" className="hover:text-[#4b2e22] transition-colors">
+                  +1 (562) 451-5530
                 </a>
               </div>
             </div>

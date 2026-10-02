@@ -179,7 +179,7 @@ export default function ReturnPolicyPage() {
             <p>All returns are handled <strong>by mail</strong>. Here&apos;s how it works:</p>
             <ol className="list-decimal pl-6 space-y-3">
               <li>
-                <strong>Contact us</strong> at <a href="mailto:contact@biancabutler.shop" className="text-blue-600 hover:underline font-semibold">contact@biancabutler.shop</a> or call <span className="font-semibold">+1(786) 302-5205</span>.
+                <strong>Contact us</strong> at <a href="mailto:contact@biancabutler.shop" className="text-blue-600 hover:underline font-semibold">contact@biancabutler.shop</a> or call <a href="tel:+15624515530" className="font-semibold hover:underline">+1 (562) 451-5530</a>.
               </li>
               <li>
                 <strong>Get your free return label</strong>. We&apos;ll email you a prepaid label after approving your return request.
@@ -245,7 +245,7 @@ export default function ReturnPolicyPage() {
                   <span>Phone</span>
                 </div>
                 <div className="text-sm text-gray-600 pl-7 space-y-1">
-                  <div>+1(786) 302-5205</div>
+                  <a href="tel:+15624515530" className="hover:underline">+1 (562) 451-5530</a>
                 </div>
 
                 <div className="flex items-center gap-2 font-bold text-[#4b2e22] pt-2">
@@ -265,7 +265,7 @@ export default function ReturnPolicyPage() {
                 <div className="text-sm text-gray-600 pl-7 space-y-2">
                   <div>
                     <strong className="text-gray-900 block">Business Address:</strong>
-                    Contact Bianca Butler through contact@biancabutler.shop for current business details.
+                    <address className="not-italic">301 Roundhill Dr, Rockaway, NJ 07866, United States</address>
                   </div>
                 </div>
               </div>

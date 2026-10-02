@@ -39,7 +39,7 @@ export default function BillingPolicyPage() {
         </section>
         <section className="space-y-4 rounded-2xl bg-white p-6 shadow-sm sm:p-8">
           <h2 className="text-2xl font-bold text-[#261810]">Questions</h2>
-          <p>For billing questions, contact <a className="font-semibold text-[#4b2e22] underline" href="mailto:contact@biancabutler.shop">contact@biancabutler.shop</a> or call +1 (786) 302-5205.</p>
+          <p>For billing questions, contact <a className="font-semibold text-[#4b2e22] underline" href="mailto:contact@biancabutler.shop">contact@biancabutler.shop</a> or call <a className="font-semibold text-[#4b2e22] underline" href="tel:+15624515530">+1 (562) 451-5530</a>.</p>
         </section>
       </article>
     </main>

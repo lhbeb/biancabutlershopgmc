@@ -195,7 +195,7 @@ const TermsPage = () => {
             <div className="bg-gray-50 rounded-lg p-6 space-y-3">
               <div>
                 <div className="font-medium text-[#261810] mb-1">Phone:</div>
-                <div className="text-gray-600">+1(786) 302-5205</div>
+                <a href="tel:+15624515530" className="text-gray-600 hover:underline">+1 (562) 451-5530</a>
               </div>
               <div>
                 <div className="font-medium text-[#261810] mb-1">Email:</div>
@@ -203,7 +203,7 @@ const TermsPage = () => {
               </div>
               <div>
                 <div className="font-medium text-[#261810] mb-1">Business Address:</div>
-                <div className="text-gray-600">Contact Bianca Butler through contact@biancabutler.shop for current business details.</div>
+                <address className="text-gray-600 not-italic">301 Roundhill Dr, Rockaway, NJ 07866, United States</address>
               </div>
               <div>
                 <div className="font-medium text-[#261810] mb-1">Hours:</div>

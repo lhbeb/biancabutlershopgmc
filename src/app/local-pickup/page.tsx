@@ -25,7 +25,7 @@ export default function LocalPickupPage() {
     <div className="min-h-screen bg-[#fff8ed] py-10 sm:py-14">
       <LegalPageSchema
         name="Local Pickup Guide | Bianca Butler"
-        description="Bianca Butler local pickup guide for eligible coffee machines, espresso makers, and barista accessories in Gilbert, Arizona."
+        description="Bianca Butler local pickup guide for eligible orders at 301 Roundhill Dr, Rockaway, NJ 07866, United States."
         path="/local-pickup"
       />
       <div className="container mx-auto px-4">
@@ -38,7 +38,7 @@ export default function LocalPickupPage() {
               Pick up your Bianca Butler order with confidence
             </h1>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#F2E5D8] sm:text-base">
-              Eligible coffee machines, espresso makers, and barista accessories can be collected from our location in Gilbert, Arizona. This page covers what to expect, what to bring, and how collection works once your order is ready.
+              Eligible orders can be collected from our location at 301 Roundhill Dr, Rockaway, NJ 07866, United States. This page covers what to expect, what to bring, and how collection works once your order is ready.
             </p>
           </section>
 
@@ -108,10 +108,9 @@ export default function LocalPickupPage() {
                     <h2 className="text-lg font-semibold text-[#261810]">Pickup location</h2>
                     <div className="mt-4 space-y-4 text-sm leading-7 text-[#68554A]">
                       <address className="not-italic">
-                        <span className="block font-semibold text-[#261810]">United States</span>
-                        Contact Bianca Butler through contact@biancabutler.shop
+                        301 Roundhill Dr
                         <br />
-                        the United States
+                        Rockaway, NJ 07866
                         <br />
                         United States
                       </address>
