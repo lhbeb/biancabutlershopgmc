@@ -8,6 +8,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { formatBiancaButlerGmcId } from '@/lib/conditions';
+import { toBiancaButlerProductImageUrl } from '@/lib/productImageUrls';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
@@ -68,7 +69,7 @@ function transformProductToGMC(product: Product, baseUrl: string): GMCProduct {
   }
 
   // Get product images
-  const images = product.images || [];
+  const images = (product.images || []).map(toBiancaButlerProductImageUrl);
   const imageLink = images[0] || `${baseUrl}/placeholder-product.jpg`;
   const additionalImageLinks = images.slice(1, 11); // GMC allows up to 10 additional images
 

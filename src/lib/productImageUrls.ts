@@ -1,6 +1,7 @@
 const BUCKET = 'product-images';
 const STORAGE_MARKER = `/storage/v1/object/public/${BUCKET}/`;
 const PROXY_MARKER = '/api/product-images/';
+const SITE_ORIGIN = 'https://biancabutler.shop';
 
 export function encodeStoragePath(path: string): string {
   return path
@@ -39,9 +40,7 @@ export function extractProductImageStoragePath(value: string): string | null {
 }
 
 export function productImageStorageUrl(storagePath: string): string {
-  const supabaseOrigin = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  if (!supabaseOrigin) throw new Error('Supabase image storage is not configured');
-  return `${supabaseOrigin.replace(/\/$/, '')}${STORAGE_MARKER}${encodeStoragePath(storagePath)}`;
+  return `${SITE_ORIGIN}${PROXY_MARKER}${encodeStoragePath(storagePath)}`;
 }
 
 export function toBiancaButlerProductImageUrl(value: string): string {

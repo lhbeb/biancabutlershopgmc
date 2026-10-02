@@ -3,6 +3,7 @@ import { getAllProducts } from '@/lib/data';
 import { formatBiancaButlerGmcId, mapConditionToGmc } from '@/lib/conditions';
 import { isGmcFeedEligibleProduct } from '@/lib/gmc';
 import { enrichGmcDescription } from '@/lib/gmc-description';
+import { toBiancaButlerProductImageUrl } from '@/lib/productImageUrls';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -48,7 +49,7 @@ export async function GET() {
         let imageLink = '';
         if (p.images && p.images.length > 0) {
           try {
-            imageLink = new URL(p.images[0], BASE_URL).toString();
+            imageLink = new URL(toBiancaButlerProductImageUrl(p.images[0]), BASE_URL).toString();
           } catch {
             imageLink = p.images[0];
           }
@@ -57,8 +58,8 @@ export async function GET() {
 
         const additionalImageTags = Array.isArray(p.images) && p.images.length > 1
           ? p.images.slice(1, 11).map((imgUrl: string) => {
-              let fullUrl = imgUrl;
-              try { fullUrl = new URL(imgUrl, BASE_URL).toString(); } catch {}
+              let fullUrl = toBiancaButlerProductImageUrl(imgUrl);
+              try { fullUrl = new URL(fullUrl, BASE_URL).toString(); } catch {}
               return `\n      <g:additional_image_link>${escapeXml(fullUrl)}</g:additional_image_link>`;
             }).join('')
           : '';

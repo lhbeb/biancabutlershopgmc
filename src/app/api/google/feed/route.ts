@@ -8,6 +8,7 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { formatBiancaButlerGmcId } from '@/lib/conditions';
+import { toBiancaButlerProductImageUrl } from '@/lib/productImageUrls';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
@@ -55,7 +56,7 @@ function mapConditionToGMC(condition: string): string {
 }
 
 function generateProductXml(product: Product, baseUrl: string): string {
-  const images = product.images || [];
+  const images = (product.images || []).map(toBiancaButlerProductImageUrl);
   const imageLink = images[0] || `${baseUrl}/placeholder.jpg`;
   const additionalImages = images
     .slice(1, 11)
